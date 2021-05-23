@@ -1,9 +1,9 @@
-import Navbar from "./components/sidenav/sidenav.component";
+import HomePage from "./components/home.component";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <HomePage />
     </div>
   );
 }

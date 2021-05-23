@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "./sidenavData";
 import "./sidenav.styles.scss";
 
-const Navbar = () => {
+const SideNavbar = () => {
   return (
     <nav className="navbar">
-      <div className="container">
-        <div className="nav-header">
-          <Link to="#">
-            <span>Raahee</span>
-          </Link>
-        </div>
+      <div className="nav-header">
+        <Link to="#">
+          <span>Raahee</span>
+        </Link>
       </div>
       <ul className="nav-items">
         {SidebarData.map((item, index) => {
@@ -28,4 +26,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SideNavbar;

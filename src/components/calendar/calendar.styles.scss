@@ -1,0 +1,127 @@
+.cal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .calendar {
+    box-sizing: border-box;
+    font-size: 1rem;
+
+    .header {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      height: 25%;
+      min-height: 2rem;
+      line-height: 2rem;
+      color: black;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      display: flex;
+      .disable {
+        flex: 1;
+        text-align: left;
+        margin-left: 1rem;
+        color: #666666;
+      }
+      .previous {
+        flex: 1;
+        text-align: left;
+        margin-left: 1rem;
+      }
+      .next {
+        flex: 1;
+        text-align: right;
+        margin-right: 1rem;
+      }
+    }
+
+    .body {
+      .day {
+        position: relative;
+        width: calc(100% / 7);
+        height: 44px;
+        text-align: center;
+        display: inline-block;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        z-index: 1;
+        text-align: center;
+        .before {
+          color: grey;
+          width: 35%;
+          margin-left: 32%;
+          border-radius: 50%;
+        }
+        .today {
+          background-color: gray;
+          color: white;
+          font-weight: bolder;
+          width: 35%;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          margin-left: 32%;
+          border-radius: 50%;
+        }
+        .selected {
+          width: 35%;
+          margin-left: 32%;
+          border-radius: 50%;
+          background-color: #ffcece;
+          color: white;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          font-weight: bolder;
+        }
+        div {
+          height: 44px;
+          position: relative;
+          color: black;
+          z-index: 100;
+          line-height: 44px;
+        }
+      }
+
+      .day-names {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: center;
+        .week {
+          background-color: white;
+          width: calc(100% / 7);
+          height: 44px;
+          line-height: 44px;
+          text-align: center;
+          text-transform: uppercase;
+          color: black;
+          font-weight: bolder;
+          div {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    background-color: #f1687c;
+    border-radius: 10px;
+    display: flex;
+    padding: 1.2% 0;
+    align-items: center;
+    justify-content: center;
+    span {
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      font-weight: 900;
+    }
+  }
+}

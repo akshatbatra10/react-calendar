@@ -1,7 +1,6 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
 import * as GiIcons from "react-icons/gi";
-// import * as BiIcons from "react-icons/bi";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
@@ -14,7 +13,8 @@ export const SidebarData = [
     title: "Home",
     path: "/",
     icon: <ImIcons.ImHome3 />,
-    cName: "nav-text active",
+    cName: "nav-text select",
+    select: true,
   },
   {
     id: 2,
@@ -22,6 +22,7 @@ export const SidebarData = [
     path: "/",
     icon: <FaIcons.FaUserNurse />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 3,
@@ -29,6 +30,7 @@ export const SidebarData = [
     path: "/",
     icon: <FaIcons.FaRegNewspaper />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 4,
@@ -36,6 +38,7 @@ export const SidebarData = [
     path: "/",
     icon: <BsIcons.BsInboxFill />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 5,
@@ -43,6 +46,7 @@ export const SidebarData = [
     path: "/",
     icon: <RiIcons.RiHistoryFill />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 6,
@@ -50,6 +54,7 @@ export const SidebarData = [
     path: "/",
     icon: <GiIcons.GiWallet />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 7,
@@ -57,6 +62,7 @@ export const SidebarData = [
     path: "/",
     icon: <AiIcons.AiOutlineMessage />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 8,
@@ -64,6 +70,7 @@ export const SidebarData = [
     path: "/",
     icon: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 9,
@@ -71,6 +78,7 @@ export const SidebarData = [
     path: "/",
     icon: <BsIcons.BsGearFill />,
     cName: "nav-text",
+    select: false,
   },
   {
     id: 10,
@@ -78,5 +86,6 @@ export const SidebarData = [
     path: "/",
     icon: <RiIcons.RiContactsBookLine />,
     cName: "nav-text",
+    select: false,
   },
 ];

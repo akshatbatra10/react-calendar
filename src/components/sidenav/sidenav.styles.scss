@@ -1,8 +1,8 @@
 .navbar {
   background-color: #efefef;
   height: 100vh;
-  width: 18%;
-  min-width: 120px;
+  width: 100%;
+  min-width: 150px;
   display: flex;
   flex-direction: column;
   a {
@@ -18,10 +18,6 @@
     li {
       padding-bottom: 5%;
       padding-top: 5%;
-
-      :hover {
-        color: #fa7d90;
-      }
     }
     span {
       padding-left: 5%;
@@ -29,16 +25,15 @@
     }
   }
 
-  .container {
-    background-color: #e0e0e0;
-  }
-
   .nav-header {
     font-size: 1.5rem;
+    background-color: #e0e0e0;
+    height: 8%;
+    min-width: 150px;
     display: flex;
     text-transform: uppercase;
-    margin: 7% 10%;
     justify-content: center;
+    align-items: center;
     span {
       color: black;
     }
@@ -50,7 +45,10 @@
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.2rem;
-    .active {
+    :hover {
+      color: #fa7d90;
+    }
+    .select {
       span {
         color: #f1687c;
       }

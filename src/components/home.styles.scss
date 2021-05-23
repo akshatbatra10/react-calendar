@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  .nav {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .calendarStyle {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .community {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}

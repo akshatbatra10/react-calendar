@@ -1,0 +1,68 @@
+.comm {
+  width: 100%;
+  background-color: #efefef;
+
+  .contain {
+    font-size: 1.5rem;
+    background-color: #e0e0e0;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 10%;
+    }
+  }
+  .conversation {
+    margin-top: 2%;
+    background-color: #f3b9c2;
+    color: white;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .type {
+    position: absolute;
+    bottom: 0;
+    background-color: #f3b9c2;
+    width: 25%;
+    border-radius: 10px;
+    padding: 0.5% 0;
+
+    .type-mid {
+      padding: 2%;
+      border-radius: 10px;
+      margin: 0 0.2%;
+      background-color: white;
+      .col {
+        margin-left: 0;
+        input {
+          border-style: hidden;
+          border-radius: 10px;
+          border: 0.6px solid #e4e4e4;
+          padding: 2.5% 5%;
+          width: 90%;
+        }
+        ::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #cbcbcb;
+          opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #cbcbcb;
+        }
+
+        ::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: #cbcbcb;
+        }
+      }
+    }
+  }
+}
