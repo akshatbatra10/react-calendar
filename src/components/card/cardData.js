@@ -1,7 +1,7 @@
 export const EntryData = [
   {
     id: 1,
-    date: 4,
+    date: 14,
     month: "May",
     color: "#abd194",
     title: "It was a good day",

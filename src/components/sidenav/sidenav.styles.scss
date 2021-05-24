@@ -5,6 +5,25 @@
   min-width: 150px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    height: 8%;
+    width: 100%;
+  }
+  .navbar-toggler {
+    display: flex;
+    justify-content: flex-start;
+    svg {
+      display: none;
+    }
+    @media screen and (max-width: 800px) {
+      display: flex;
+      justify-content: flex-end;
+      svg {
+        display: inline;
+      }
+    }
+  }
   a {
     text-decoration: none;
   }
@@ -12,12 +31,25 @@
   ul {
     list-style-type: none;
     padding-left: 10%;
+    @media screen and (max-width: 800px) {
+      padding-left: 0;
+      // display: flex;
+      // justify-content: space-between;
+    }
+
     svg {
       color: #f1687c;
     }
     li {
       padding-bottom: 5%;
       padding-top: 5%;
+      @media screen and (max-width: 800px) {
+        padding-top: 0;
+        padding-bottom: 1%;
+        svg {
+          margin-left: 5%;
+        }
+      }
     }
     span {
       padding-left: 5%;
@@ -34,8 +66,14 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 800px) {
+      justify-content: space-between;
+    }
     span {
       color: black;
+      @media screen and (max-width: 800px) {
+        margin-left: 18%;
+      }
     }
   }
 
@@ -45,6 +83,12 @@
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.2rem;
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 2%;
+      justify-content: space-between;
+    }
     :hover {
       color: #fa7d90;
     }

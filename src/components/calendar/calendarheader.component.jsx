@@ -30,9 +30,9 @@ const CalenderHeader = ({ value, setValue }) => {
       </div>
       <div className="current">
         {currentMonth()} {currentYear()}
-        <div className="changeMonth">
-          <span>Month</span>
-        </div>
+      </div>
+      <div className="changeMonth">
+        <span>Month</span>
       </div>
       <div className="next" onClick={() => setValue(nextMonth())}>
         <FaIcons.FaGreaterThan />

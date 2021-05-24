@@ -2,22 +2,34 @@
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 800px) {
-    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
   }
   .nav {
     width: 15%;
     display: flex;
     justify-content: flex-start;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
   }
   .calendarStyle {
     width: 60%;
     display: flex;
     justify-content: flex-start;
+    @media screen and (max-width: 800px) {
+      // justify-content: center;
+      width: 100%;
+    }
   }
   .community {
     width: 25%;
     display: flex;
     justify-content: flex-start;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      // justify-content: center;
+    }
   }
 }

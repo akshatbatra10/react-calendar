@@ -51,18 +51,14 @@ const CalendarComponent = ({ value, onChange }) => {
       </div>
       <div className="mid">
         <span>Latest Entries</span>
-        <div className="slider">
-          <div className="slide-container">
-            <div className="card-container-class">
-              {EntryData.length ? (
-                EntryData.filter((item, idx) => idx < 3).map((item) => {
-                  return <CardComponent item={item} />;
-                })
-              ) : (
-                <div className="message">No Entries</div>
-              )}
-            </div>
-          </div>
+        <div className="card-container-class">
+          {EntryData.length ? (
+            EntryData.filter((item, idx) => idx < 3).map((item) => {
+              return <CardComponent item={item} />;
+            })
+          ) : (
+            <div className="message">No Entries</div>
+          )}
         </div>
       </div>
       <div className="footer">

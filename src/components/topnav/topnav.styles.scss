@@ -5,14 +5,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: 1000px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  // @media screen and (max-width: 500px) {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
   .nav-title {
     margin-left: 3%;
     font-size: 1.7rem;
+    @media screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
   a {
     text-decoration: none;
@@ -26,13 +29,18 @@
     align-items: center;
     justify-content: space-evenly;
     width: 20%;
+    @media screen and (max-width: 600px) {
+      width: 30%;
+    }
     svg {
       color: #f1687c;
       margin-right: 8%;
       height: 2rem;
       width: 1.5rem;
-      @media screen and (max-width: 1000px) {
-        display: none;
+      @media screen and (max-width: 500px) {
+        // display: none;
+        height: 1rem;
+        width: 1rem;
       }
     }
     margin: -4.5% 1%;
