@@ -1,6 +1,10 @@
 .main {
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
   .nav {
     width: 15%;
     display: flex;

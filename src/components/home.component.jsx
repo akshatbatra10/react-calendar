@@ -13,12 +13,11 @@ const HomePage = () => {
       dow: 1,
     },
   });
-  const [active, setActive] = useState(false);
   const [value, setValue] = useState(moment());
   return (
     <div className="main">
       <div className="nav">
-        <SideNavbar active={active} setActive={setActive} />
+        <SideNavbar />
       </div>
       <div className="calendarStyle">
         <CalendarComponent value={value} onChange={setValue} />

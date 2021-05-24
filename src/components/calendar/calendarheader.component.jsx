@@ -1,4 +1,5 @@
 import React from "react";
+import * as FaIcons from "react-icons/fa";
 
 const CalenderHeader = ({ value, setValue }) => {
   const prevMonth = () => {
@@ -25,13 +26,16 @@ const CalenderHeader = ({ value, setValue }) => {
         className={thisMonth() ? "disable previous" : "previous"}
         onClick={() => !thisMonth() && setValue(prevMonth())}
       >
-        {String.fromCharCode(171)}
+        <FaIcons.FaLessThan />
       </div>
       <div className="current">
         {currentMonth()} {currentYear()}
+        <div className="changeMonth">
+          <span>Month</span>
+        </div>
       </div>
       <div className="next" onClick={() => setValue(nextMonth())}>
-        {String.fromCharCode(187)}
+        <FaIcons.FaGreaterThan />
       </div>
     </div>
   );

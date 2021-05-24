@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import * as AiIcons from "react-icons/ai";
 
 import TopNav from "../topnav/topnav.component";
 import CalenderHeader from "./calendarheader.component";
 import dayStyles, { beforeThisMonth } from "./styles";
 import BuildCalendar from "./buildcalendar";
+import CardComponent from "../card/card.components";
+import { EntryData } from "../card/cardData";
 
 import "./calendar.styles.scss";
 
@@ -29,21 +32,42 @@ const CalendarComponent = ({ value, onChange }) => {
           </div>
           {calender.map((week, idx) => (
             <div key={idx}>
-              {week.map((day) => (
-                <div
-                  className="day"
-                  key={day._d}
-                  onClick={() => !beforeThisMonth(day) && onChange(day)}
-                >
-                  <div className={dayStyles(day, value)}>{day.format("D")}</div>
-                </div>
-              ))}
+              {week.map((day) => {
+                return (
+                  <div
+                    className="day"
+                    key={day._d}
+                    onClick={() => !beforeThisMonth(day) && onChange(day)}
+                  >
+                    <div className={dayStyles(day, value)}>
+                      {day.format("D")}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           ))}
         </div>
       </div>
+      <div className="mid">
+        <span>Latest Entries</span>
+        <div className="slider">
+          <div className="slide-container">
+            <div className="card-container-class">
+              {EntryData.length ? (
+                EntryData.filter((item, idx) => idx < 3).map((item) => {
+                  return <CardComponent item={item} />;
+                })
+              ) : (
+                <div className="message">No Entries</div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="footer">
         <span>add a new entry</span>
+        <AiIcons.AiOutlinePlus />
       </div>
     </div>
   );

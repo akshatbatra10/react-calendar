@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
 .cal {
   display: flex;
   flex-direction: column;
@@ -5,7 +6,8 @@
 
   .calendar {
     box-sizing: border-box;
-    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.3rem;
 
     .header {
       text-align: center;
@@ -15,24 +17,51 @@
       min-height: 2rem;
       line-height: 2rem;
       color: black;
-      font-size: 1.5rem;
-      font-weight: bolder;
-      display: flex;
-      .disable {
-        flex: 1;
-        text-align: left;
-        margin-left: 1rem;
-        color: #666666;
-      }
+      font-size: 1.6rem;
       .previous {
         flex: 1;
         text-align: left;
         margin-left: 1rem;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          cursor: pointer;
+        }
+      }
+      .current {
+        display: flex;
+        flex-direction: row;
+        .changeMonth {
+          // margin-left: 30%;
+          span {
+            padding: 5% 15%;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            color: white;
+            background-color: #f3b9c2;
+          }
+        }
+      }
+      .disable {
+        flex: 1;
+        text-align: left;
+        margin-left: 1rem;
+        color: #e0e0e0;
+        svg {
+          pointer-events: all;
+          cursor: not-allowed;
+          opacity: 0.4;
+        }
       }
       .next {
         flex: 1;
         text-align: right;
         margin-right: 1rem;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          cursor: pointer;
+        }
       }
     }
 
@@ -50,7 +79,7 @@
         z-index: 1;
         text-align: center;
         .before {
-          color: grey;
+          color: #d3d2d2;
           width: 35%;
           margin-left: 32%;
           border-radius: 50%;
@@ -68,6 +97,7 @@
         }
         .selected {
           width: 35%;
+          font-family: "Ubuntu", sans-serif;
           margin-left: 32%;
           border-radius: 50%;
           background-color: #ffcece;
@@ -78,11 +108,14 @@
           font-weight: bolder;
         }
         div {
+          font-family: "Montserrat", sans-serif;
           height: 44px;
           position: relative;
           color: black;
           z-index: 100;
           line-height: 44px;
+          cursor: pointer;
+          font-weight: 700;
         }
       }
 
@@ -100,7 +133,6 @@
           text-align: center;
           text-transform: uppercase;
           color: black;
-          font-weight: bolder;
           div {
             width: 100%;
           }
@@ -108,11 +140,75 @@
       }
     }
   }
+  .mid {
+    position: absolute;
+    bottom: 10%;
+    margin-left: 2%;
+    span {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.2rem;
+    }
+    .slider {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 3%;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .card-container-class {
+        overflow-x: scroll;
+        display: block;
+        white-space: nowrap;
+        width: 55%;
+        // display: flex;
+        // margin-right: 3%;
+        // flex-direction: row;
+        // margin-bottom: 2%;
+
+        .card {
+          display: inline-block;
+          background-color: #e0e0e0;
+          width: 100%;
+          margin-top: 1.5%;
+          border-radius: 15px;
+          margin-right: 1%;
+          object-fit: cover;
+          .month {
+            font-family: "Montserrat", sans-serif;
+            margin-left: 2%;
+          }
+          .card-title {
+            margin-bottom: 7%;
+            font-family: "Ubuntu", sans-serif;
+            margin-top: 2%;
+          }
+          .card-subtitle {
+            font-family: "Montserrat", sans-serif;
+            position: absolute;
+            bottom: 2%;
+            padding-bottom: 2%;
+          }
+          .date {
+            font-family: "Ubuntu", sans-serif;
+            border-radius: 50%;
+            padding: 3%;
+            color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          }
+        }
+      }
+    }
+  }
+
   .footer {
+    font-family: "Ubuntu", sans-serif;
     position: absolute;
     bottom: 0;
     width: 60%;
-    background-color: #f1687c;
+    background-color: #ffb3b3;
     border-radius: 10px;
     display: flex;
     padding: 1.2% 0;
@@ -122,6 +218,14 @@
       text-transform: uppercase;
       font-size: 1.7rem;
       font-weight: 900;
+    }
+    svg {
+      height: 2.5rem;
+      width: 2.5rem;
+      position: absolute;
+      right: 0;
+      margin-right: 4%;
+      cursor: pointer;
     }
   }
 }
