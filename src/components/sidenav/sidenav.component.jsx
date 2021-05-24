@@ -26,8 +26,8 @@ const SideNavbar = () => {
         </button>
       </div>
 
-      <div classNass="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="nav-items">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="nav-item">
           {SidebarData.map((item, idx) => {
             return (
               <li

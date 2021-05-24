@@ -53,7 +53,7 @@ const CalendarComponent = ({ value, onChange }) => {
         <span>Latest Entries</span>
         <div className="card-container-class">
           {EntryData.length ? (
-            EntryData.filter((item, idx) => idx < 3).map((item) => {
+            EntryData.filter((item, idx) => idx < 6).map((item) => {
               return <CardComponent item={item} />;
             })
           ) : (

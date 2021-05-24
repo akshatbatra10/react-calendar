@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: stretch;
 
   .calendar {
     box-sizing: border-box;
@@ -18,7 +19,8 @@
       line-height: 2rem;
       color: black;
       font-size: 1.6rem;
-      @media screen and (max-width: 800px) {
+      font-weight: 700;
+      @media screen and (max-width: 992px) {
         font-size: 1.2rem;
         height: 15%;
       }
@@ -39,9 +41,9 @@
       .changeMonth {
         // margin-left: 30%;
         span {
-          padding: 5% 15%;
+          padding: 10% 20%;
           font-size: 1.2rem;
-          border-radius: 10px;
+          border-radius: 20px;
           color: white;
           background-color: #f3b9c2;
         }
@@ -87,7 +89,7 @@
         z-index: 1;
         text-align: center;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 992px) {
           font-size: 1rem;
         }
 
@@ -119,7 +121,7 @@
             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
             rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           font-weight: bolder;
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 992px) {
             padding-left: 40%;
             padding-right: 40%;
             margin-left: 0;
@@ -134,7 +136,7 @@
           line-height: 44px;
           cursor: pointer;
           font-weight: 700;
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 992px) {
             font-weight: 300;
           }
         }
@@ -152,9 +154,10 @@
           height: 44px;
           line-height: 44px;
           text-align: center;
+          font-weight: 700;
           text-transform: uppercase;
           color: black;
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 992px) {
             font-size: 1rem;
             font-weight: 400;
           }
@@ -168,20 +171,22 @@
   .mid {
     position: absolute;
     bottom: 10%;
-    margin-left: 2%;
+    margin-left: 1%;
     overflow-x: scroll;
-    max-width: 58%;
+    max-width: 59%;
     overflow: hidden;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 992px) {
       max-width: 100%;
       margin-left: 0.3%;
     }
     span {
       font-family: "Ubuntu", sans-serif;
       font-size: 1.2rem;
-      @media screen and (max-width: 800px) {
+      font-weight: 700;
+      @media screen and (max-width: 992px) {
         font-size: 1rem;
         margin-bottom: 1%;
+        font-weight: 400;
       }
     }
     .card-container-class {
@@ -201,15 +206,12 @@
       // margin-bottom: 2%;
 
       .card {
-        // display: inline-block;
         background-color: #e0e0e0;
         width: 100%;
         margin-bottom: 1.5%;
-        // border-radius: 15px;
         margin-right: 1%;
-        // object-fit: cover;
         min-width: 350px;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 992px) {
           min-width: 250px;
         }
         .month {
@@ -220,8 +222,10 @@
           margin-bottom: 7%;
           font-family: "Ubuntu", sans-serif;
           margin-top: 2%;
-          @media screen and (max-width: 800px) {
+          font-weight: 700;
+          @media screen and (max-width: 992px) {
             font-size: 1rem;
+            font-weight: 400;
           }
         }
         .card-subtitle {
@@ -229,7 +233,7 @@
           position: absolute;
           bottom: 2%;
           padding-bottom: 2%;
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 992px) {
             font-size: 1rem;
           }
         }
@@ -257,10 +261,17 @@
     padding: 1.2% 0;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
     span {
       text-transform: uppercase;
       font-size: 1.7rem;
       font-weight: 900;
+      @media screen and (max-width: 992px) {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
     }
     svg {
       height: 2.5rem;
@@ -269,6 +280,10 @@
       right: 0;
       margin-right: 4%;
       cursor: pointer;
+      @media screen and (max-width: 992px) {
+        height: 1.3rem;
+        width: 1.3rem;
+      }
     }
   }
 }
