@@ -39,7 +39,6 @@
         flex-direction: row;
       }
       .changeMonth {
-        // margin-left: 30%;
         span {
           padding: 10% 20%;
           font-size: 1.2rem;
@@ -121,11 +120,11 @@
             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
             rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           font-weight: bolder;
-          @media screen and (max-width: 992px) {
-            padding-left: 40%;
-            padding-right: 40%;
-            margin-left: 0;
-          }
+          // @media screen and (max-width: 992px) {
+          //   padding-left: 40%;
+          //   padding-right: 40%;
+          //   margin-left: 0;
+          // }
         }
         div {
           font-family: "Montserrat", sans-serif;
@@ -171,13 +170,14 @@
   .mid {
     position: absolute;
     bottom: 10%;
-    margin-left: 1%;
+    margin-left: 2%;
     overflow-x: scroll;
-    max-width: 59%;
+    max-width: 58%;
     overflow: hidden;
     @media screen and (max-width: 992px) {
       max-width: 100%;
-      margin-left: 0.3%;
+      bottom: 7%;
+      margin-left: 1%;
     }
     span {
       font-family: "Ubuntu", sans-serif;
@@ -186,7 +186,6 @@
       @media screen and (max-width: 992px) {
         font-size: 1rem;
         margin-bottom: 1%;
-        font-weight: 400;
       }
     }
     .card-container-class {
@@ -196,14 +195,6 @@
         display: none;
         width: 0;
       }
-      // overflow-x: scroll;
-      // display: block;
-      // white-space: nowrap;
-      // width: 55%;
-      // display: flex;
-      // margin-right: 3%;
-      // flex-direction: row;
-      // margin-bottom: 2%;
 
       .card {
         background-color: #e0e0e0;

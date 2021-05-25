@@ -25,7 +25,7 @@ export const EntryData = [
   },
   {
     id: 4,
-    date: 8,
+    date: 17,
     month: "May",
     color: "#f5baee",
     title: "It was a good day",
@@ -33,7 +33,7 @@ export const EntryData = [
   },
   {
     id: 5,
-    date: 9,
+    date: 31,
     month: "May",
     color: "#dd9297",
     title: "It was a good day",
