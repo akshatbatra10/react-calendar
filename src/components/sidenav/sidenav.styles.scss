@@ -16,6 +16,11 @@
   .navbar-toggler {
     display: flex;
     justify-content: flex-start;
+    &::focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
     svg {
       display: none;
     }
@@ -48,6 +53,7 @@
 
     svg {
       color: #f1687c;
+      margin-top: 2%;
     }
     li {
       padding-bottom: 5%;
@@ -75,6 +81,13 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    button {
+      &::focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
     @media screen and (max-width: 992px) {
       justify-content: space-between;
     }
