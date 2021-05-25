@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./sidenavData";
 import * as GiIcons from "react-icons/gi";
+import * as ImIcons from "react-icons/im";
 import "./sidenav.styles.scss";
 
 const SideNavbar = () => {
@@ -12,6 +13,9 @@ const SideNavbar = () => {
       <div className="nav-header">
         <Link to="#">
           <span>Raahee</span>
+          <div className="header">
+            <ImIcons.ImHeart />
+          </div>
         </Link>
         <button
           className="navbar-toggler"
