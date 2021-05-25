@@ -8,69 +8,84 @@
     height: 8%;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 992px) {
+      justify-content: center;
+      margin-top: 10px;
+    }
     span {
       margin-left: 10%;
-    }
-  }
-  .conversation {
-    margin-top: 2%;
-    background-color: #f3b9c2;
-    color: white;
-    height: 8%;
-    display: flex;
-    justify-content: center;
-    span {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .type {
-    position: absolute;
-    bottom: 0;
-    background-color: #f3b9c2;
-    width: 25%;
-    border-radius: 10px;
-    padding: 0.5% 0;
-    @media screen and (max-width: 992px) {
-      width: 100%;
-    }
-
-    .type-mid {
-      padding: 2%;
-      border-radius: 10px;
-      margin: 0 0.2%;
-      background-color: white;
       @media screen and (max-width: 992px) {
-        padding: 1%;
-      }
-      .col {
         margin-left: 0;
-        input {
-          border-style: hidden;
-          border-radius: 10px;
-          border: 0.6px solid #e4e4e4;
-          padding: 2.5% 5%;
-          width: 95%;
+      }
+    }
+  }
+  .arrange2 {
+    display: flex;
+    flex-direction: column;
+    height: 92%;
+    justify-content: space-between;
+    .conversation {
+      margin-top: 2%;
+      background-color: #f3b9c2;
+      color: white;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
 
-          @media screen and (max-width: 992px) {
-            padding: 0.5%;
+    .type {
+      // position: absolute;
+      // bottom: 0;
+      background-color: #f3b9c2;
+      width: 100%;
+      border-radius: 10px;
+      padding: 0.5% 0;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        position: relative;
+        margin-top: 500px;
+      }
+
+      .type-mid {
+        padding: 2%;
+        border-radius: 10px;
+        margin: 0 0.2%;
+        background-color: white;
+        @media screen and (max-width: 992px) {
+          padding: 1%;
+        }
+        .col {
+          margin-left: 0;
+          input {
+            border-style: hidden;
+            border-radius: 10px;
+            border: 0.6px solid #e4e4e4;
+            padding: 2.5% 5%;
+            width: 95%;
+
+            @media screen and (max-width: 992px) {
+              padding: 0.5%;
+            }
           }
-        }
-        ::placeholder {
-          /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #cbcbcb;
-          opacity: 1; /* Firefox */
-        }
+          ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #cbcbcb;
+            opacity: 1; /* Firefox */
+          }
 
-        :-ms-input-placeholder {
-          /* Internet Explorer 10-11 */
-          color: #cbcbcb;
-        }
+          :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #cbcbcb;
+          }
 
-        ::-ms-input-placeholder {
-          /* Microsoft Edge */
-          color: #cbcbcb;
+          ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #cbcbcb;
+          }
         }
       }
     }

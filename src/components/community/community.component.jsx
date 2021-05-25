@@ -8,13 +8,15 @@ const Community = () => {
       <div className="contain">
         <span>Community</span>
       </div>
-      <div className="conversation">
-        <span>Start a conversation</span>
-      </div>
-      <div className="type">
-        <div className="type-mid">
-          <div className="col">
-            <input type="text" placeholder="Start Typing here...." />
+      <div className="arrange2">
+        <div className="conversation">
+          <span>Start a conversation</span>
+        </div>
+        <div className="type">
+          <div className="type-mid">
+            <div className="col">
+              <input type="text" placeholder="Start Typing here...." />
+            </div>
           </div>
         </div>
       </div>

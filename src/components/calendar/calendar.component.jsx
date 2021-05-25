@@ -20,45 +20,47 @@ const CalendarComponent = ({ value, onChange }) => {
   return (
     <div className="cal">
       <TopNav />
-      <div className="calendar">
-        <CalenderHeader value={value} setValue={onChange} />
-        <div className="body">
-          <div className="day-names">
-            {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
-              <div className="week" key={d}>
-                {d}
+      <div className="arrange1">
+        <div className="calendar">
+          <CalenderHeader value={value} setValue={onChange} />
+          <div className="body">
+            <div className="day-names">
+              {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
+                <div className="week" key={d}>
+                  {d}
+                </div>
+              ))}
+            </div>
+            {calender.map((week, idx) => (
+              <div key={idx}>
+                {week.map((day) => {
+                  return (
+                    <div
+                      className="day"
+                      key={day._d}
+                      onClick={() => !beforeThisMonth(day) && onChange(day)}
+                    >
+                      <div className={dayStyles(day, value)}>
+                        {day.format("D")}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             ))}
           </div>
-          {calender.map((week, idx) => (
-            <div key={idx}>
-              {week.map((day) => {
-                return (
-                  <div
-                    className="day"
-                    key={day._d}
-                    onClick={() => !beforeThisMonth(day) && onChange(day)}
-                  >
-                    <div className={dayStyles(day, value)}>
-                      {day.format("D")}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          ))}
         </div>
-      </div>
-      <div className="mid">
-        <span>Latest Entries</span>
-        <div className="card-container-class">
-          {EntryData.length ? (
-            EntryData.filter((item, idx) => idx < 6).map((item, idx) => {
-              return <CardComponent item={item} key={idx} />;
-            })
-          ) : (
-            <div className="message">No Entries</div>
-          )}
+        <div className="mid">
+          <span>Latest Entries</span>
+          <div className="card-container-class">
+            {EntryData.length ? (
+              EntryData.filter((item, idx) => idx < 6).map((item, idx) => {
+                return <CardComponent item={item} key={idx} />;
+              })
+            ) : (
+              <div className="message">No Entries</div>
+            )}
+          </div>
         </div>
       </div>
       <div className="footer">
